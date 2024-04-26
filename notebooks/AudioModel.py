@@ -69,26 +69,26 @@ class CNNNetwork(nn.Module):
         self.linear = nn.Linear(128 * 5 * 4, n_classes)
         self.softmax = nn.Softmax(dim=1)
         
-        # need to define how sequential should pass 
-        # the data forawrd between layers that we just defined
-        # in the sequential architecture
-        def forward(self, input_data):
-            x = self.conv1(input_data)
-            x = self.conv2(x)
-            x = self.conv3(x)
-            x = self.conv4(x)
-            x = self.flatten(x)
-            logits = self.linear(x)
-            predictions = self.softmax(logits) 
-            return predictions
-        
-        if __name__ == "__main__":
-            cnn = CNNNetwork() # we can add arugments to the constructor
-            # 1 -- channel (grayscale)
-            # 64 -- frequency axis
-            # 44 -- the time axis 
-            print('testing')
-            summary(cnn.cuda(), (1, 64, 44))
+    # need to define how sequential should pass 
+    # the data forawrd between layers that we just defined
+    # in the sequential architecture
+    def forward(self, input_data):
+        x = self.conv1(input_data)
+        x = self.conv2(x)
+        x = self.conv3(x)
+        x = self.conv4(x)
+        x = self.flatten(x)
+        logits = self.linear(x)
+        predictions = self.softmax(logits) 
+        return predictions
+
+    if __name__ == "__main__":
+        cnn = CNNNetwork() # we can add arugments to the constructor
+        # 1 -- channel (grayscale)
+        # 64 -- frequency axis
+        # 44 -- the time axis 
+        print('testing')
+        summary(cnn.cuda(), (1, 64, 44))
             
        
         

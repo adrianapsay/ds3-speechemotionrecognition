@@ -1,0 +1,180 @@
+2024-04-25 23:44:16,211 INFO    StreamThr :7310 [internal.py:wandb_internal():86] W&B internal server running at pid: 7310, started at: 2024-04-25 23:44:16.209893
+2024-04-25 23:44:16,214 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: status
+2024-04-25 23:44:16,224 INFO    WriterThread:7310 [datastore.py:open_for_write():87] open: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/run-1w37mf22.wandb
+2024-04-25 23:44:16,225 DEBUG   SenderThread:7310 [sender.py:send():379] send: header
+2024-04-25 23:44:16,310 DEBUG   SenderThread:7310 [sender.py:send():379] send: run
+2024-04-25 23:44:16,586 INFO    SenderThread:7310 [dir_watcher.py:__init__():211] watching files in: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files
+2024-04-25 23:44:16,586 INFO    SenderThread:7310 [sender.py:_start_run_threads():1124] run started: 1w37mf22 with start time 1714088656.208984
+2024-04-25 23:44:16,600 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: check_version
+2024-04-25 23:44:16,601 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: check_version
+2024-04-25 23:44:16,699 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: run_start
+2024-04-25 23:44:16,712 DEBUG   HandlerThread:7310 [system_info.py:__init__():26] System info init
+2024-04-25 23:44:16,712 DEBUG   HandlerThread:7310 [system_info.py:__init__():41] System info init done
+2024-04-25 23:44:16,712 INFO    HandlerThread:7310 [system_monitor.py:start():194] Starting system monitor
+2024-04-25 23:44:16,713 INFO    SystemMonitor:7310 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-04-25 23:44:16,713 INFO    HandlerThread:7310 [system_monitor.py:probe():214] Collecting system info
+2024-04-25 23:44:16,714 INFO    SystemMonitor:7310 [interfaces.py:start():190] Started cpu monitoring
+2024-04-25 23:44:16,715 INFO    SystemMonitor:7310 [interfaces.py:start():190] Started disk monitoring
+2024-04-25 23:44:16,717 INFO    SystemMonitor:7310 [interfaces.py:start():190] Started gpu monitoring
+2024-04-25 23:44:16,718 INFO    SystemMonitor:7310 [interfaces.py:start():190] Started memory monitoring
+2024-04-25 23:44:16,720 INFO    SystemMonitor:7310 [interfaces.py:start():190] Started network monitoring
+2024-04-25 23:44:16,760 DEBUG   HandlerThread:7310 [system_info.py:probe():150] Probing system
+2024-04-25 23:44:16,770 DEBUG   HandlerThread:7310 [system_info.py:_probe_git():135] Probing git
+2024-04-25 23:44:16,792 DEBUG   HandlerThread:7310 [system_info.py:_probe_git():143] Probing git done
+2024-04-25 23:44:16,792 DEBUG   HandlerThread:7310 [system_info.py:probe():198] Probing system done
+2024-04-25 23:44:16,792 DEBUG   HandlerThread:7310 [system_monitor.py:probe():223] {'os': 'Linux-3.10.0-1160.114.2.el7.x86_64-x86_64-with-glibc2.31', 'python': '3.9.5', 'heartbeatAt': '2024-04-25T23:44:16.760539', 'startedAt': '2024-04-25T23:44:16.199482', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '<python with no main file>', 'codePathLocal': None, 'git': {'remote': 'https://github.com/vdubey0/ds3-audio.git', 'commit': '57717b7c22e1b57ee9c4f542bbd8a69359fd027e'}, 'email': 'lwtaylor@ucsd.edu', 'root': '/home/lwtaylor/ds3-audio', 'host': 'dsmlp-jupyter-lwtaylor', 'username': 'lwtaylor', 'executable': '/opt/conda/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 1128.1110156250002, 'min': 1000.0, 'max': 3900.0}, 'cpu_freq_per_core': [{'current': 1406.335, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1075.317, 'min': 1000.0, 'max': 3900.0}, {'current': 1154.351, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1209.1, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.634, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 1007.794, 'min': 1000.0, 'max': 3900.0}, {'current': 1515.411, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 2895.214, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.213, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1027.166, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1115.606, 'min': 1000.0, 'max': 3900.0}, {'current': 1229.455, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.775, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.213, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.634, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.213, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.196, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.634, 'min': 1000.0, 'max': 3900.0}, {'current': 999.932, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.634, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 2840.466, 'min': 1000.0, 'max': 3900.0}, {'current': 1001.477, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.213, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.213, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.634, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.073, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.213, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.494, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.775, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.494, 'min': 1000.0, 'max': 3900.0}, {'current': 1000.213, 'min': 1000.0, 'max': 3900.0}, {'current': 3767.822, 'min': 1000.0, 'max': 3900.0}], 'disk': {'/': {'total': 1489.686321258545, 'used': 1231.8900909423828}}, 'gpu': 'NVIDIA GeForce RTX 2080 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}], 'memory': {'total': 376.3662757873535}}
+2024-04-25 23:44:16,793 INFO    HandlerThread:7310 [system_monitor.py:probe():224] Finished collecting system info
+2024-04-25 23:44:16,793 INFO    HandlerThread:7310 [system_monitor.py:probe():227] Publishing system info
+2024-04-25 23:44:16,793 DEBUG   HandlerThread:7310 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-04-25 23:44:17,415 DEBUG   HandlerThread:7310 [system_info.py:_save_conda():222] Saving conda packages done
+2024-04-25 23:44:17,419 INFO    HandlerThread:7310 [system_monitor.py:probe():229] Finished publishing system info
+2024-04-25 23:44:17,434 DEBUG   SenderThread:7310 [sender.py:send():379] send: files
+2024-04-25 23:44:17,435 INFO    SenderThread:7310 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-04-25 23:44:17,598 INFO    Thread-12 :7310 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/wandb-metadata.json
+2024-04-25 23:44:17,598 INFO    Thread-12 :7310 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/conda-environment.yaml
+2024-04-25 23:44:17,630 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: python_packages
+2024-04-25 23:44:17,631 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: python_packages
+2024-04-25 23:44:17,636 DEBUG   SenderThread:7310 [sender.py:send():379] send: telemetry
+2024-04-25 23:44:17,672 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-25 23:44:17,673 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-25 23:44:17,674 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: stop_status
+2024-04-25 23:44:17,845 INFO    wandb-upload_0:7310 [upload_job.py:push():131] Uploaded file /tmp/tmp3mboyz_mwandb/y7zu00p3-wandb-metadata.json
+2024-04-25 23:44:18,595 INFO    Thread-12 :7310 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/requirements.txt
+2024-04-25 23:44:18,596 INFO    Thread-12 :7310 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/output.log
+2024-04-25 23:44:19,225 DEBUG   SenderThread:7310 [sender.py:send():379] send: telemetry
+2024-04-25 23:44:19,226 DEBUG   SenderThread:7310 [sender.py:send():379] send: telemetry
+2024-04-25 23:44:19,227 DEBUG   SenderThread:7310 [sender.py:send():379] send: exit
+2024-04-25 23:44:19,227 INFO    SenderThread:7310 [sender.py:send_exit():586] handling exit code: 1
+2024-04-25 23:44:19,227 INFO    SenderThread:7310 [sender.py:send_exit():588] handling runtime: 2
+2024-04-25 23:44:19,233 INFO    SenderThread:7310 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-25 23:44:19,234 INFO    SenderThread:7310 [sender.py:send_exit():594] send defer
+2024-04-25 23:44:19,234 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:19,234 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 0
+2024-04-25 23:44:19,235 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:19,235 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-04-25 23:44:19,235 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 1
+2024-04-25 23:44:19,236 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:19,236 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 1
+2024-04-25 23:44:19,236 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:19,237 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-04-25 23:44:19,237 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 2
+2024-04-25 23:44:19,237 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:19,237 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 2
+2024-04-25 23:44:19,237 INFO    HandlerThread:7310 [system_monitor.py:finish():203] Stopping system monitor
+2024-04-25 23:44:19,237 DEBUG   SystemMonitor:7310 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-04-25 23:44:19,239 DEBUG   SystemMonitor:7310 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-04-25 23:44:19,239 DEBUG   SystemMonitor:7310 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-04-25 23:44:19,240 INFO    HandlerThread:7310 [interfaces.py:finish():202] Joined cpu monitor
+2024-04-25 23:44:19,243 INFO    HandlerThread:7310 [interfaces.py:finish():202] Joined disk monitor
+2024-04-25 23:44:19,256 INFO    HandlerThread:7310 [interfaces.py:finish():202] Joined gpu monitor
+2024-04-25 23:44:19,257 INFO    HandlerThread:7310 [interfaces.py:finish():202] Joined memory monitor
+2024-04-25 23:44:19,257 INFO    HandlerThread:7310 [interfaces.py:finish():202] Joined network monitor
+2024-04-25 23:44:19,258 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:19,259 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-04-25 23:44:19,259 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 3
+2024-04-25 23:44:19,259 DEBUG   SenderThread:7310 [sender.py:send():379] send: stats
+2024-04-25 23:44:19,260 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:19,260 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 3
+2024-04-25 23:44:19,261 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:19,261 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-04-25 23:44:19,261 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 4
+2024-04-25 23:44:19,261 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:19,262 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 4
+2024-04-25 23:44:19,262 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:19,262 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-04-25 23:44:19,263 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 5
+2024-04-25 23:44:19,263 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:19,263 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 5
+2024-04-25 23:44:19,264 DEBUG   SenderThread:7310 [sender.py:send():379] send: summary
+2024-04-25 23:44:19,265 INFO    SenderThread:7310 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-25 23:44:19,266 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:19,266 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-04-25 23:44:19,266 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 6
+2024-04-25 23:44:19,266 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:19,266 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 6
+2024-04-25 23:44:19,267 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:19,267 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-04-25 23:44:19,272 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: status_report
+2024-04-25 23:44:19,368 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 7
+2024-04-25 23:44:19,368 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:19,368 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 7
+2024-04-25 23:44:19,369 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:19,369 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-04-25 23:44:19,596 INFO    Thread-12 :7310 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/config.yaml
+2024-04-25 23:44:19,597 INFO    Thread-12 :7310 [dir_watcher.py:_on_file_created():271] file/dir created: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/wandb-summary.json
+2024-04-25 23:44:20,188 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 23:44:20,598 INFO    Thread-12 :7310 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/output.log
+2024-04-25 23:44:21,237 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 8
+2024-04-25 23:44:21,238 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 23:44:21,238 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:21,238 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 8
+2024-04-25 23:44:21,239 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:21,239 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-04-25 23:44:21,240 INFO    SenderThread:7310 [job_builder.py:build():318] Attempting to build job artifact
+2024-04-25 23:44:21,241 INFO    SenderThread:7310 [job_builder.py:_get_source_type():455] is repo sourced job
+2024-04-25 23:44:21,241 INFO    SenderThread:7310 [job_builder.py:_get_program_relpath():473] run is notebook based run
+2024-04-25 23:44:21,241 WARNING SenderThread:7310 [job_builder.py:_log_if_verbose():210] Source type is set to 'repo' but some required information is missing from the environment. A job will not be created from this run. See https://docs.wandb.ai/guides/launch/create-job
+2024-04-25 23:44:21,241 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 9
+2024-04-25 23:44:21,241 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:21,241 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 9
+2024-04-25 23:44:21,242 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:21,242 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-04-25 23:44:21,242 INFO    SenderThread:7310 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-25 23:44:21,599 INFO    SenderThread:7310 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/output.log
+2024-04-25 23:44:21,600 INFO    SenderThread:7310 [dir_watcher.py:finish():388] scan: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files
+2024-04-25 23:44:21,601 INFO    SenderThread:7310 [dir_watcher.py:finish():402] scan save: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/requirements.txt requirements.txt
+2024-04-25 23:44:21,601 INFO    SenderThread:7310 [dir_watcher.py:finish():402] scan save: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/wandb-metadata.json wandb-metadata.json
+2024-04-25 23:44:21,601 INFO    SenderThread:7310 [dir_watcher.py:finish():402] scan save: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/conda-environment.yaml conda-environment.yaml
+2024-04-25 23:44:21,602 INFO    SenderThread:7310 [dir_watcher.py:finish():402] scan save: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/output.log output.log
+2024-04-25 23:44:21,609 INFO    SenderThread:7310 [dir_watcher.py:finish():402] scan save: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/config.yaml config.yaml
+2024-04-25 23:44:21,610 INFO    SenderThread:7310 [dir_watcher.py:finish():402] scan save: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/wandb-summary.json wandb-summary.json
+2024-04-25 23:44:21,624 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 10
+2024-04-25 23:44:21,625 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:21,631 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 10
+2024-04-25 23:44:21,633 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:21,633 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-04-25 23:44:21,634 INFO    SenderThread:7310 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-25 23:44:21,901 INFO    wandb-upload_0:7310 [upload_job.py:push():131] Uploaded file /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/requirements.txt
+2024-04-25 23:44:22,004 INFO    wandb-upload_2:7310 [upload_job.py:push():131] Uploaded file /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/config.yaml
+2024-04-25 23:44:22,032 INFO    wandb-upload_1:7310 [upload_job.py:push():131] Uploaded file /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/output.log
+2024-04-25 23:44:22,046 INFO    wandb-upload_3:7310 [upload_job.py:push():131] Uploaded file /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/files/wandb-summary.json
+2024-04-25 23:44:22,189 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 23:44:22,190 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 23:44:22,247 INFO    Thread-11 :7310 [sender.py:transition_state():614] send defer: 11
+2024-04-25 23:44:22,247 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:22,248 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 11
+2024-04-25 23:44:22,248 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:22,249 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-04-25 23:44:22,249 INFO    SenderThread:7310 [file_pusher.py:join():178] waiting for file pusher
+2024-04-25 23:44:22,249 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 12
+2024-04-25 23:44:22,249 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:22,250 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 12
+2024-04-25 23:44:22,250 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:22,250 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-04-25 23:44:22,250 INFO    SenderThread:7310 [file_stream.py:finish():614] file stream finish called
+2024-04-25 23:44:22,343 INFO    SenderThread:7310 [file_stream.py:finish():618] file stream finish is done
+2024-04-25 23:44:22,344 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 13
+2024-04-25 23:44:22,344 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:22,344 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 13
+2024-04-25 23:44:22,345 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:22,345 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-04-25 23:44:22,345 INFO    SenderThread:7310 [sender.py:transition_state():614] send defer: 14
+2024-04-25 23:44:22,346 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: defer
+2024-04-25 23:44:22,346 DEBUG   SenderThread:7310 [sender.py:send():379] send: final
+2024-04-25 23:44:22,346 INFO    HandlerThread:7310 [handler.py:handle_request_defer():172] handle defer: 14
+2024-04-25 23:44:22,346 DEBUG   SenderThread:7310 [sender.py:send():379] send: footer
+2024-04-25 23:44:22,347 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: defer
+2024-04-25 23:44:22,347 INFO    SenderThread:7310 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-04-25 23:44:22,349 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-25 23:44:22,350 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: poll_exit
+2024-04-25 23:44:22,354 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-25 23:44:22,356 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: server_info
+2024-04-25 23:44:22,356 DEBUG   SenderThread:7310 [sender.py:send_request():406] send_request: server_info
+2024-04-25 23:44:22,396 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: get_summary
+2024-04-25 23:44:22,396 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: sampled_history
+2024-04-25 23:44:22,437 DEBUG   HandlerThread:7310 [handler.py:handle_request():146] handle_request: shutdown
+2024-04-25 23:44:22,438 INFO    HandlerThread:7310 [handler.py:finish():866] shutting down handler
+2024-04-25 23:44:23,356 INFO    WriterThread:7310 [datastore.py:close():296] close: /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240425_234416-1w37mf22/run-1w37mf22.wandb
+2024-04-25 23:44:23,431 INFO    SenderThread:7310 [sender.py:finish():1546] shutting down sender
+2024-04-25 23:44:23,431 INFO    SenderThread:7310 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-25 23:44:23,431 INFO    SenderThread:7310 [file_pusher.py:join():178] waiting for file pusher

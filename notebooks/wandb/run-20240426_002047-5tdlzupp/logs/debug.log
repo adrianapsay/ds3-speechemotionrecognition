@@ -1,0 +1,31 @@
+2024-04-26 00:20:47,480 INFO    MainThread:7703 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-04-26 00:20:47,480 INFO    MainThread:7703 [wandb_setup.py:_flush():76] Configure stats pid to 7703
+2024-04-26 00:20:47,480 INFO    MainThread:7703 [wandb_setup.py:_flush():76] Loading settings from /home/lwtaylor/.config/wandb/settings
+2024-04-26 00:20:47,480 INFO    MainThread:7703 [wandb_setup.py:_flush():76] Loading settings from /home/lwtaylor/ds3-audio/notebooks/wandb/settings
+2024-04-26 00:20:47,481 INFO    MainThread:7703 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-04-26 00:20:47,481 INFO    MainThread:7703 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-04-26 00:20:47,481 INFO    MainThread:7703 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-04-26 00:20:47,481 INFO    MainThread:7703 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-04-26 00:20:47,481 INFO    MainThread:7703 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-04-26 00:20:47,481 INFO    MainThread:7703 [wandb_init.py:_log_setup():521] Logging user logs to /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240426_002047-5tdlzupp/logs/debug.log
+2024-04-26 00:20:47,481 INFO    MainThread:7703 [wandb_init.py:_log_setup():522] Logging internal logs to /home/lwtaylor/ds3-audio/notebooks/wandb/run-20240426_002047-5tdlzupp/logs/debug-internal.log
+2024-04-26 00:20:47,481 INFO    MainThread:7703 [wandb_init.py:_jupyter_setup():467] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7fe37c329520>
+2024-04-26 00:20:47,482 INFO    MainThread:7703 [wandb_init.py:init():561] calling init triggers
+2024-04-26 00:20:47,482 INFO    MainThread:7703 [wandb_init.py:init():568] wandb.init called with sweep_config: {}
+config: {'epochs': 10, 'batch_size': 64, 'learning_rate': 0.001, 'audio_dir': '../data/Crema', 'sample_rate': 16000, 'num_samples': 22050, 'n_fft': 1024, 'hop_length': 512, 'n_mels': 64, 'model': 'cnn', 'dataset': 'crema'}
+2024-04-26 00:20:47,483 INFO    MainThread:7703 [wandb_init.py:init():611] starting backend
+2024-04-26 00:20:47,483 INFO    MainThread:7703 [wandb_init.py:init():615] setting up manager
+2024-04-26 00:20:47,487 INFO    MainThread:7703 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-04-26 00:20:47,488 INFO    MainThread:7703 [wandb_init.py:init():623] backend started and connected
+2024-04-26 00:20:47,516 INFO    MainThread:7703 [wandb_run.py:_label_probe_notebook():1299] probe notebook
+2024-04-26 00:20:47,516 INFO    MainThread:7703 [wandb_run.py:_label_probe_notebook():1309] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-04-26 00:20:47,516 INFO    MainThread:7703 [wandb_init.py:init():715] updated telemetry
+2024-04-26 00:20:47,639 INFO    MainThread:7703 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-04-26 00:20:47,859 ERROR   MainThread:7703 [wandb_init.py:init():774] encountered error: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+2024-04-26 00:20:49,876 ERROR   MainThread:7703 [wandb_init.py:init():1199] It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)
+Traceback (most recent call last):
+  File "/home/lwtaylor/.local/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1181, in init
+    run = wi.init()
+  File "/home/lwtaylor/.local/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 780, in init
+    raise error
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 404: Not Found)

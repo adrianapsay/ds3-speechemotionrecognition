@@ -1,0 +1,116 @@
+
+Using cuda
+  0%|          | 0/10 [00:00<?, ?it/s]
+CNNNetwork(
+  (conv1): Sequential(
+    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv4): Sequential(
+    (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear): Linear(in_features=2560, out_features=6, bias=True)
+  (softmax): Softmax(dim=1)
+)
+Epoch 1
+Loss after 01536 examples: 1.869
+Loss after 03136 examples: 1.857
+Loss after 04736 examples: 1.825
+
+ 10%|█         | 1/10 [00:53<08:01, 53.52s/it]
+loss: 1.7131094932556152
+---------------------------
+Epoch 2
+Loss after 07890 examples: 1.902
+Loss after 09490 examples: 1.950
+Loss after 11090 examples: 1.825
+Loss after 12690 examples: 1.824
+
+ 20%|██        | 2/10 [01:37<06:22, 47.78s/it]
+loss: 1.7125179767608643
+---------------------------
+Epoch 3
+Loss after 15844 examples: 1.857
+Loss after 17444 examples: 1.872
+Loss after 19044 examples: 1.903
+
+ 30%|███       | 3/10 [02:20<05:21, 45.89s/it]
+Loss after 22244 examples: 1.889
+loss: 1.7143908739089966
+---------------------------
+Epoch 4
+Loss after 23798 examples: 1.783
+Loss after 25398 examples: 1.919
+Loss after 26998 examples: 1.950
+Loss after 28598 examples: 1.872
+loss: 1.7102590799331665
+---------------------------
+
+ 40%|████      | 4/10 [03:03<04:28, 44.77s/it]
+Loss after 30152 examples: 1.872
+Loss after 31752 examples: 1.856
+Loss after 33352 examples: 1.794
+Loss after 34952 examples: 1.887
+
+ 50%|█████     | 5/10 [03:46<03:39, 43.96s/it]
+loss: 1.7102590799331665
+---------------------------
+Epoch 6
+Loss after 38106 examples: 1.856
+Loss after 39706 examples: 1.840
+Loss after 41306 examples: 1.856
+Loss after 42906 examples: 1.840
+
+ 60%|██████    | 6/10 [04:29<02:53, 43.46s/it]
+loss: 1.7102590799331665
+---------------------------
+Epoch 7
+Loss after 46060 examples: 1.887
+Loss after 47660 examples: 1.919
+Loss after 49260 examples: 1.887
+
+ 70%|███████   | 7/10 [05:11<02:09, 43.16s/it]
+loss: 1.7102590799331665
+---------------------------
+Epoch 8
+Loss after 52414 examples: 1.840
+Loss after 54014 examples: 1.856
+Loss after 55614 examples: 1.840
+Loss after 57214 examples: 1.856
+Loss after 58814 examples: 1.825
+loss: 1.7102590799331665
+---------------------------
+
+ 80%|████████  | 8/10 [05:54<01:25, 42.95s/it]
+Loss after 60368 examples: 1.903
+Loss after 61968 examples: 1.856
+Loss after 63568 examples: 1.934
+Loss after 65168 examples: 1.934
+Loss after 66768 examples: 1.950
+loss: 1.7102590799331665
+---------------------------
+
+ 90%|█████████ | 9/10 [06:36<00:42, 42.79s/it]
+Loss after 68322 examples: 1.825
+Loss after 69922 examples: 1.903
+Loss after 71522 examples: 1.840
+
+100%|██████████| 10/10 [07:18<00:00, 43.90s/it]
+loss: 1.7102590799331665
+---------------------------
+Finished training
+Trained feed forward net saved at feedforwardnet.pth

@@ -1,0 +1,56 @@
+
+Using cuda
+  0%|          | 0/10 [00:00<?, ?it/s]
+CNNNetwork(
+  (conv1): Sequential(
+    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv4): Sequential(
+    (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear): Linear(in_features=2560, out_features=6, bias=True)
+  (softmax): Softmax(dim=1)
+)
+Epoch 1
+Loss after 01536 examples: 1.649
+Loss after 03136 examples: 1.619
+Loss after 04736 examples: 1.565
+
+ 10%|█         | 1/10 [01:10<10:30, 70.04s/it]
+loss: 1.7439117431640625
+---------------------------
+Epoch 2
+Loss after 07890 examples: 1.589
+Loss after 09490 examples: 1.684
+Loss after 11090 examples: 1.596
+Loss after 12690 examples: 1.659
+
+ 20%|██        | 2/10 [02:05<08:09, 61.24s/it]
+loss: 1.5831371545791626
+---------------------------
+Epoch 3
+Loss after 15844 examples: 1.631
+Loss after 17444 examples: 1.734
+Loss after 19044 examples: 1.637
+
+ 30%|███       | 3/10 [02:58<06:44, 57.73s/it]
+Loss after 22244 examples: 1.600
+loss: 1.5190603733062744
+---------------------------
+Epoch 4
+Loss after 23798 examples: 1.665

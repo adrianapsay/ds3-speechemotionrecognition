@@ -31,7 +31,7 @@ class AudioEmotionDataset(Dataset):
         
         # create data frame out of wav_files
         # emotion is listed and can be used by label
-        # idk what notsure is again
+        # idk what the notsure column is again
         emotions = pd.DataFrame(wav_file_paths, columns=['filename'])
         emotions['filename'] = emotions['filename'].str.split('_')
         emotions = pd.DataFrame(emotions['filename'].tolist(), columns=['id', 'notsure', 'emotion', 'version'])
@@ -39,6 +39,19 @@ class AudioEmotionDataset(Dataset):
         
         # emotions data frame with file path
         self.emotions = emotions
+        
+        # could pass this in on as a fixed map if we know that the labels will not change in each dataset
+        emotion_map = dict()
+
+        label_num = 0
+        for emotion in self.emotions['emotion'].unique():
+            emotion_map[emotion] = label_num
+            label_num += 1
+        
+        # save the map for interpretation
+        self.emotion_map = emotion_map
+        
+        self.emotions['emotion'] = self.emotions['emotion'].map(emotion_map)
     
     def __len__(self):
         # return len of dataframe
@@ -63,6 +76,8 @@ class AudioEmotionDataset(Dataset):
         # transform the signal with a mel spectogram 
         # that is passed in 
         signal = self.transformation(signal)
+        
+        signal = torch.log(signal + 0.00001)
         return signal, label
         
     def _get_audio_sample_path(self, index):
@@ -103,35 +118,36 @@ class AudioEmotionDataset(Dataset):
     def _right_pad_if_necessary(self, signal):
         length_signal = signal.shape[1]
         if length_signal < self.num_samples:
-            num_missing_samples = self.num_samples - lenghth_signal 
+            num_missing_samples = self.num_samples - length_signal 
             last_dim_padding = (0, num_missing_samples)
             signal = torch.nn.functional.pad(signal, last_dim_padding)
+        return signal
             
-if __name__ == "__main__":
-    AUDIO_DIR = '../data/Crema'
-    SAMPLE_RATE = 16000
-    NUM_SAMPLES = 22050
+# if __name__ == "__main__":
+#     AUDIO_DIR = '../data/Crema'
+#     SAMPLE_RATE = 16000
+#     NUM_SAMPLES = 22050
     
-    if torch.cuda.is_available():
-        device = 'cuda'
-    else: 
-        device = 'cpu'
+#     if torch.cuda.is_available():
+#         device = 'cuda'
+#     else: 
+#         device = 'cpu'
     
-    print(f'Using Device {device}')
+#     print(f'Using Device {device}')
 
-    # ms = mel_spectogram(signal)
-    # mel_spectogram will be applied to the signal like
-    # this because torchaudio.transforms objects can
-    # be treated like funciton 
+#     # ms = mel_spectogram(signal)
+#     # mel_spectogram will be applied to the signal like
+#     # this because torchaudio.transforms objects can
+#     # be treated like funciton 
 
-    mel_spectogram = torchaudio.transforms.MelSpectrogram(
-    sample_rate = SAMPLE_RATE, 
-    n_fft=1024, 
-    hop_length=512,
-    n_mels=64)
+#     mel_spectogram = torchaudio.transforms.MelSpectrogram(
+#     sample_rate = SAMPLE_RATE, 
+#     n_fft=1024, 
+#     hop_length=512,
+#     n_mels=64)
 
-    ead = AudioEmotionDataset(AUDIO_DIR, 
-                              mel_spectogram, 
-                              SAMPLE_RATE,
-                              NUM_SAMPLES,
-                              device)
+#     ead = AudioEmotionDataset(AUDIO_DIR, 
+#                               mel_spectogram, 
+#                               SAMPLE_RATE,
+#                               NUM_SAMPLES,
+#                               device)

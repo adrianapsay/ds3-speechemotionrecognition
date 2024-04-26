@@ -1,0 +1,247 @@
+{
+    "os": "Linux-3.10.0-1160.114.2.el7.x86_64-x86_64-with-glibc2.31",
+    "python": "3.9.5",
+    "heartbeatAt": "2024-04-26T22:00:15.790618",
+    "startedAt": "2024-04-26T22:00:15.252820",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/vdubey0/ds3-audio.git",
+        "commit": "57717b7c22e1b57ee9c4f542bbd8a69359fd027e"
+    },
+    "email": "lwtaylor@ucsd.edu",
+    "root": "/home/lwtaylor/ds3-audio",
+    "host": "dsmlp-jupyter-lwtaylor",
+    "username": "lwtaylor",
+    "executable": "/opt/conda/bin/python",
+    "cpu_count": 20,
+    "cpu_count_logical": 40,
+    "cpu_freq": {
+        "current": 1386.5841749999995,
+        "min": 1200.0,
+        "max": 3100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1289.196,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 2199.865,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1297.924,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.439,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1218.566,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1400.244,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1398.901,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1235.485,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1199.902,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1285.839,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.573,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1247.033,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1283.154,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1199.902,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1199.902,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1396.215,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1199.902,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.439,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3078.71,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.439,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1232.531,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 2082.238,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1267.443,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1233.605,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.036,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1217.761,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1382.25,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1455.7,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.036,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1252.001,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1269.055,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1354.455,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1244.079,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1295.507,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1253.344,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1211.181,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.17,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.17,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 2860.644,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1304.772,
+            "min": 1200.0,
+            "max": 3100.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 784.2262649536133,
+            "used": 259.9185791015625
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1080 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11811160064
+        }
+    ],
+    "memory": {
+        "total": 251.6274871826172
+    }
+}
