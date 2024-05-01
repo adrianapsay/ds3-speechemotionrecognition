@@ -12,6 +12,8 @@ import librosa
 import soundfile as sf
 from IPython.display import Audio
 
+from audio_processing_functions import *
+
 
 class AudioEmotionDataset(Dataset):
     # audio_dir example: '../data/Crema'
@@ -92,62 +94,20 @@ class AudioEmotionDataset(Dataset):
         return self.emotions.iloc[index, 2]
     
     def _resample_if_necessary(self, signal, sr):
-        if sr != self.target_sample_rate:
-            resampler = torchaudio.transforms.Resample(sr, self.target_sample_rate)
-            signal = resampler(signal)
-        return signal
+        return resample(signal, sr, self.target_sample_rate)
     
     def _mix_down_if_necessary(self, signal):
         # if we have a signal with multiple channels 
         # we will need to mix the signal down from stereo (or whatever)
         # and make it mono
-        
-        if signal.shape[0] > 1:
-            signal = torch.mean(signal, dim=0, keepdim=True)
-        return signal
+        return mix_down(signal)
     
     def _cut_if_necessary(self, signal):
         # signal -> Tensor -> (1, num_samples) -> (1, 50,000)
         
         # if the signal has more samples than the expected number
         # of samples, we need to cut it down
-        if signal.shape[1] > self.num_samples:
-            signal = signal[:, :self.num_samples]
-        return signal
+        return cut_signal(signal, self.num_samples)
     
     def _right_pad_if_necessary(self, signal):
-        length_signal = signal.shape[1]
-        if length_signal < self.num_samples:
-            num_missing_samples = self.num_samples - length_signal 
-            last_dim_padding = (0, num_missing_samples)
-            signal = torch.nn.functional.pad(signal, last_dim_padding)
-        return signal
-            
-# if __name__ == "__main__":
-#     AUDIO_DIR = '../data/Crema'
-#     SAMPLE_RATE = 16000
-#     NUM_SAMPLES = 22050
-    
-#     if torch.cuda.is_available():
-#         device = 'cuda'
-#     else: 
-#         device = 'cpu'
-    
-#     print(f'Using Device {device}')
-
-#     # ms = mel_spectogram(signal)
-#     # mel_spectogram will be applied to the signal like
-#     # this because torchaudio.transforms objects can
-#     # be treated like funciton 
-
-#     mel_spectogram = torchaudio.transforms.MelSpectrogram(
-#     sample_rate = SAMPLE_RATE, 
-#     n_fft=1024, 
-#     hop_length=512,
-#     n_mels=64)
-
-#     ead = AudioEmotionDataset(AUDIO_DIR, 
-#                               mel_spectogram, 
-#                               SAMPLE_RATE,
-#                               NUM_SAMPLES,
-#                               device)
+        return right_pad_signal(signal, self.num_samples)
