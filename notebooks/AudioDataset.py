@@ -51,7 +51,7 @@ class AudioEmotionDataset(Dataset):
             label_num += 1
         
         # save the map for interpretation
-        self.emotion_map = emotion_map
+        self.emotion_map = {'HAP': 0, 'NEU': 1, 'ANG': 2, 'FEA': 3, 'DIS': 4, 'SAD': 5}
         
         # retain a column with emotions letter code for interpretability
         # map emotions column to number for PyTorch model 
