@@ -53,6 +53,9 @@ class AudioEmotionDataset(Dataset):
         # save the map for interpretation
         self.emotion_map = emotion_map
         
+        # retain a column with emotions letter code for interpretability
+        # map emotions column to number for PyTorch model 
+        self.emotions['emotion_code'] = self.emotions['emotion']
         self.emotions['emotion'] = self.emotions['emotion'].map(emotion_map)
     
     def __len__(self):
