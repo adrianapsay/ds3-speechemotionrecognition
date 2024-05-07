@@ -2,8 +2,10 @@ import streamlit as st
 import torch
 from io import BytesIO
 #from your_pytorch_model_module import classify_audio  # Ensure this is your PyTorch model function
-from AudioModel import * # CNNNetwork()
+#from AudioModel import * # CNNNetwork()
 from AudioDataset import * # AudioEmotionDataset()
+
+from cnnnet import * # impport model
 
 from IPython.display import Audio
 from matplotlib.patches import Rectangle
@@ -85,12 +87,13 @@ def main():
 
         hyperparameters = dict(
         target_sample_rate=16000,
-        num_samples=22050, 
+        num_samples=60000, # 22050
         n_fft=1024, 
         hop_length=512, 
         n_mels=64, 
         sr = sr
         )
+
 
         # process the signal so it's in desired format
         signal = processing_pipeline(signal, hyperparameters)
@@ -126,8 +129,8 @@ def main():
         signal = signal.unsqueeze(0) 
 
         # Load the model
-        model = CNNNetwork().to(device)
-        model.load_state_dict(torch.load('feedforwardnet.pth', map_location=torch.device("cpu")))
+        model = CNNNetwork(num_layers=4).to(device)
+        model.load_state_dict(torch.load('cnn.pth', map_location=torch.device("cpu")))
         model.eval()
         # Make a prediction
 
