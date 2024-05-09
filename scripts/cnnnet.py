@@ -40,6 +40,7 @@ class CNNNetwork(nn.Module):
         self.softmax = nn.Softmax(dim=1)
         
         self.optimizer = torch.optim.Adam(self.parameters(), lr=self.learning_rate)
+        self.scheduler = torch.optim.lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
     
     def forward(self, input_data):
         out = self.layers[0](input_data)
@@ -59,13 +60,14 @@ class CNNNetwork(nn.Module):
         for i in range(1, num_epochs+1):
             print(f'Epoch {i} / {num_epochs} started')
             self.epoch_losses.append(self.__train_single_epoch())
+            self.scheduler.step()
             print(f'Epoch {i} / {num_epochs} finished')
             print()
             
-        return epoch_losses[-1]
+        return self.epoch_losses[-1]
             
     def predict(self, inp, target, class_mapping):
-        self.eval()
+        #self.eval()
     
         with torch.no_grad():
             prediction_probs = self(inp)
