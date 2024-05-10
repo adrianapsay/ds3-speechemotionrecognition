@@ -10,13 +10,9 @@ from torchsummary import summary
 import numpy as np
 
 class EmotionDataset(Dataset):
-    def __init__(self, data_path, data_dir, final_sample_rate, num_samples_limit, transformation, device):
+    def __init__(self, data_path, final_sample_rate, num_samples_limit, transformation, device):
         
         self.data_path = data_path
-        
-        self.data_dir = data_dir
-        if self.data_dir[-1] != '/':
-            self.data_dir += '/'
         
         self.final_sample_rate = final_sample_rate
         self.num_samples_limit = num_samples_limit
@@ -46,28 +42,28 @@ class EmotionDataset(Dataset):
     
     def resample_if_necessary(self, signal, original_sr):
         if original_sr != self.final_sample_rate:
-            resampler = torchaudio.transforms.Resample(original_sr, self.final_sample_rate)
+            resampler = torchaudio.transforms.Resample(original_sr, self.final_sample_rate).to(self.device)
             signal = resampler(signal)
         
         return signal
     
     def to_mono_if_necessary(self, signal):
         if signal.shape[0] > 1:
-            signal = torch.mean(signal, dim=0, keepdim=True)
+            signal = torch.mean(signal, dim=0, keepdim=True).to(self.device)
         return signal
     
     def cut_down_if_necessary(self, signal):
-        return signal[:, :self.num_samples_limit]
+        return signal[:, :self.num_samples_limit].to(self.device)
     
     def right_pad_if_necessary(self, signal):
         if signal.shape[1] < self.num_samples_limit:
             num_missing_samples = self.num_samples_limit - signal.shape[1]
             last_dim_padding = (0, num_missing_samples)
-            signal = torch.nn.functional.pad(signal, last_dim_padding)
+            signal = torch.nn.functional.pad(signal, last_dim_padding).to(self.device)
         return signal
         
     def get_audio_path(self, index):
-        return self.data_dir + self.df.iloc[index].filename
+        return self.df.iloc[index].filename
     
     def get_label(self, index):
         return self.df.iloc[index].category_num
