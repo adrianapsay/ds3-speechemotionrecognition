@@ -22,6 +22,7 @@ class CNNNetwork(nn.Module):
         self.layers = nn.ModuleList()
         self.epoch_train_losses = []
         self.epoch_valid_losses = []
+        self.min_loss_model = None
         
         self.layers = nn.ModuleList()
         in_kernels = 1
@@ -59,7 +60,8 @@ class CNNNetwork(nn.Module):
     
     def train(self, num_epochs):
         self.epoch_losses = []
-        early_stopper = EarlyStopper(patience=6, min_delta=0)
+        early_stopper = EarlyStopper(patience=10, min_delta=0)
+        min_loss = float('inf')
         
         for i in range(1, num_epochs+1):
             print(f'Epoch {i} / {num_epochs} started')
@@ -68,6 +70,10 @@ class CNNNetwork(nn.Module):
             
             valid_loss = self.__validate_single_epoch()
             self.epoch_valid_losses.append(valid_loss)
+            
+            if valid_loss < min_loss:
+                min_loss = valid_loss
+                self.min_loss_model = self.state_dict()
             
             if early_stopper.early_stop(valid_loss):             
                 print(f'Training stopped at Epoch {i} due to early stopping critera')
@@ -123,6 +129,9 @@ class CNNNetwork(nn.Module):
     
     def get_valid_epoch_losses(self):
         return self.epoch_valid_losses
+    
+    def get_min_loss_model(self):
+        return self.min_loss_model
     
 class EarlyStopper:
     def __init__(self, patience=1, min_delta=0):
