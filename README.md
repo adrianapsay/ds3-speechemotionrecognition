@@ -5,3 +5,4 @@
 
 ## Deployment
 Take a look at our project [here!](https://speech-emotion-classifier.streamlit.app/)
+UPDATE: Deployment no longer runs as we stopped paying for Streamlit as a host :(.
